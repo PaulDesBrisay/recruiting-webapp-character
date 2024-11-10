@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import './App.css';
-import { ATTRIBUTE_LIST, CLASS_LIST, SKILL_LIST } from './consts.js';
+import { ATTRIBUTE_LIST, CLASS_LIST, SKILL_LIST } from './consts';
+import {Attributes, Class} from './types'
+import Character from './Character'
+import CharacterEditor from './CharacterEditor';
 
 
 function App() {
@@ -12,14 +15,13 @@ function App() {
       </header>
       <section className="App-section">
         <div>
-          Value:
-          {num}
-          <button>+</button>
-          <button>-</button>
+          <CharacterEditor/>
         </div>
       </section>
     </div>
   );
 }
+
+
 
 export default App;
